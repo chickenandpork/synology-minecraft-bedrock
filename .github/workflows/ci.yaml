@@ -7,8 +7,8 @@ env:
 # yamllint disable-line rule:truthy
 on:
   push:
-    branches0ignore:
-      - 'master'   # master handled in release.yaml
+    branches-ignore:
+      - master  # master handled in release.yaml
 
 
 jobs:
@@ -17,7 +17,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [ubuntu-latest]
+        os: [ubuntu-latest]  # macos-latest
     steps:
       -
         name: Date-Based Cache key
