@@ -1,0 +1,4 @@
+exports_files(
+  ["bedrock-amakusa-dalle.png"],
+  visibility = ["//visibility:public"],
+)

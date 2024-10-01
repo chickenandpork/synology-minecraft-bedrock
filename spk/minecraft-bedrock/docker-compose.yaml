@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  bedrock:
+    image: itzg/minecraft-bedrock-server:2024.9.0
+    environment:
+      CHAT_RESTRICTION: "Disabled"
+      ENABLE_LAN_VISIBILITY: "TRUE"
+      EULA: "TRUE"
+      GROW_TREES: "TRUE"
+      SERVER_NAME: "Soko Bedrock"
+    ports:
+      - "19132:19132/udp"
+    volumes:
+      - bedrock:/data
+    stdin_open: true
+    tty: true
+
+volumes:
+  bedrock:
+    external:
+      name: bedrock
