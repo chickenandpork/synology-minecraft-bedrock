@@ -1,5 +1,6 @@
 load("@bazel_skylib//rules:copy_file.bzl", "copy_file")
 load("@bazel_skylib//rules:write_file.bzl", "write_file")
+load("@local_renovate_regex//:json.bzl", "version_json")
 load("@rules_pkg//pkg:mappings.bzl", "pkg_attributes", "pkg_files")
 load("@rules_pkg//pkg/private/tar:tar.bzl", "SUPPORTED_TAR_COMPRESSIONS", "pkg_tar")
 load(
@@ -47,7 +48,7 @@ info_file(
     description = "Minecraft: Bedrock Edition, Docker Service",
     maintainer = "//maintainers:chickenandpork",
     os_min_ver = "7.0-1",  # correct-format=[^\d+(\.\d+){1,2}(-\d+){1,2}$]
-    package_version = "1.0.0-1",
+    package_version = "{}-1".format(version_json["mbs"]["version"]),
 )
 
 privilege_config(
