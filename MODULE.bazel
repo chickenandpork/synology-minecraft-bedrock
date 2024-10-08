@@ -8,13 +8,7 @@ bazel_dep(name = "buildifier_prebuilt", version = "7.3.1", dev_dependency = True
 bazel_dep(name = "aspect_bazel_lib", version = "2.9.1")
 bazel_dep(name = "platforms", version = "0.0.10")
 bazel_dep(name = "rules_pkg", version = "1.0.1")
-bazel_dep(name = "rules_synology")
-
-# When reusing for your own project, don't use this local-override
-local_path_override(
-    module_name = "rules_synology",
-    path = "../rules_synology",
-)
+bazel_dep(name = "rules_synology", version="0.0.2")
 
 #http_file = use_repo_rule("@bazel_tools//tools/build_defs/repo:http.bzl", "http_file")
 
