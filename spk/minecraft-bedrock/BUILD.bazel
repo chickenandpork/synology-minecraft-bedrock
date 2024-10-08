@@ -41,6 +41,7 @@ docker_project(
     projects = [":{}".format(COMPOSE_COMPONENT)],
 )
 
+# check via `bazel query //spk/minecraft-bedrock:info --output=build`
 info_file(
     name = "info",
     package_name = SPK_NAME,
