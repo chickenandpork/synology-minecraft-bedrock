@@ -7,3 +7,11 @@ bazel_dep(name = "buildifier_prebuilt", version = "7.3.1", dev_dependency = True
 
 bazel_dep(name = "rules_pkg", version = "1.0.1")
 bazel_dep(name = "rules_synology", version = "0.0.2")
+
+load_json_file = use_repo_rule("//json:load_json_file.bzl", "load_json_file")
+
+load_json_file(
+    name = "local_renovate_regex",
+    src = "//:.github/renovate-regex.json",
+    variable_name = "version_json",
+)

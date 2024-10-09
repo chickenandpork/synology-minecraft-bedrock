@@ -1,3 +1,4 @@
+---
 version: '3'
 
 services:
@@ -5,18 +6,20 @@ services:
     image: itzg/minecraft-bedrock-server:2024.9.0
     environment:
       CHAT_RESTRICTION: "Disabled"
-      ENABLE_LAN_VISIBILITY: "TRUE"
+      ENABLE_LAN_VISIBILITY: "true"
       EULA: "TRUE"
       GROW_TREES: "TRUE"
-      SERVER_NAME: "Soko Bedrock"
+      SERVER_NAME: "Minecraft Bedrock"
+    network_mode: "host"
     ports:
       - "19132:19132/udp"
-    volumes:
-      - bedrock:/data
+    restart: unless-stopped
     stdin_open: true
     tty: true
+    volumes:
+      - bedrock:/data
 
 volumes:
   bedrock:
-    external:
-      name: bedrock
+  # not { external: true } because we want to create this volume as-needed
+  # TODO: can we configure this at Wizard ?

@@ -15,3 +15,7 @@ language: en
 words:
   # Solution-specific
   - Geoff
+  - allanc
+  - bazel
+  - synopkg
+  - synopkgmgr
