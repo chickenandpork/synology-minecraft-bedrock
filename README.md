@@ -19,6 +19,7 @@ ls -al bazel-bin/spk/minecraft-bedrock/minecraft-bedrock.spk
 ```
 synopkg  install minecraft-bedrock.spk
 ```
+
 ## Check
 
 ```

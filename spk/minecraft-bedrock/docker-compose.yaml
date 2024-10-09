@@ -10,6 +10,7 @@ services:
       EULA: "TRUE"
       GROW_TREES: "TRUE"
       SERVER_NAME: "Minecraft Bedrock"
+    network_mode: "host"
     ports:
       - "19132:19132/udp"
     restart: unless-stopped
