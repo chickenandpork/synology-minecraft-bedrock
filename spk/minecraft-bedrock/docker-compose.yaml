@@ -2,7 +2,7 @@
 version: '3'
 
 services:
-  bedrock:
+  itgz-mbs:
     image: itzg/minecraft-bedrock-server:2024.10.0
     environment:
       CHAT_RESTRICTION: "Disabled"
@@ -12,7 +12,10 @@ services:
       SERVER_NAME: "Minecraft Bedrock"
     network_mode: "host"
     ports:
+      - "19132:19132"
       - "19132:19132/udp"
+      - "19133:19133"
+      - "19133:19133/udp"
     restart: unless-stopped
     stdin_open: true
     tty: true
