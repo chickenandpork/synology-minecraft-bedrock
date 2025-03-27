@@ -54,6 +54,7 @@ info_file(
 
 privilege_config(
     name = "priv",
+    username = "sc-minecraft",
     # run_as_root isn't working: Synology seems to throw a 313 or 319 error whenever I have any valid binaries in the run-as-root.  Need to optimize it over time.
     #run_as_root= [ "postinst", "preuninst"],
 )
@@ -131,7 +132,7 @@ pkg_tar(
     name = SPK_NAME,
     srcs = [
         ":conf",
-        ":icons.group",
+        ":icons",
         ":info",
         ":package",
         ":scripts",
