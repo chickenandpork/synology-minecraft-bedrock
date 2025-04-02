@@ -3,7 +3,7 @@ version: '3'
 
 services:
   itgz-mbs:
-    image: itzg/minecraft-bedrock-server:2024.11.0
+    image: itzg/minecraft-bedrock-server:2025.4.0
     environment:
       CHAT_RESTRICTION: "Disabled"
       ENABLE_LAN_VISIBILITY: "true"
