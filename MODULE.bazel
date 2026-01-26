@@ -3,7 +3,7 @@ module(
     version = "1.0",
 )
 
-bazel_dep(name = "buildifier_prebuilt", version = "8.2.1.1", dev_dependency = True)
+bazel_dep(name = "buildifier_prebuilt", version = "8.2.1.2", dev_dependency = True)
 bazel_dep(name = "bazel_skylib", version = "1.9.0")
 bazel_dep(name = "rules_pkg", version = "1.2.0")
 bazel_dep(name = "rules_synology", version = "0.2.3")
