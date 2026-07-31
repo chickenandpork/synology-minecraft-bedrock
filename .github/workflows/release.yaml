@@ -58,7 +58,7 @@ jobs:
       pull-requests: write
     needs: [build]
     steps:
-      - uses: googleapis/release-please@235d56107ff6bda82a0ea8b657cea31632c76410 # v17.11.0
+      - uses: googleapis/release-please@fdaca293b5c9215c7bcae72dd228ba9558120817 # v17.11.1
         # Settings -> Actions -> General -> Workflow Permissions
         # - select "Read repo contents", and
         # - enable "Allow Github Actions to create and approve pull requests"
