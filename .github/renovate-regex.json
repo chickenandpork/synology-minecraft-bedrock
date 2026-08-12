@@ -2,7 +2,7 @@
   "mbs": {
     "renovate_datasource": "docker",
     "renovate_depname": "itzg/minecraft-bedrock-server",
-    "sha256": "sha256:77a3aead6bcde7c295b9601d53141aada4707c5dfc56341a9c3dc413f36e8454",
-    "version": "2026.8.0"
+    "sha256": "sha256:27210cf47597673bde6d8edf60f3f52f79267cbb6bdc5e6255fa4d200810eca2",
+    "version": "2026.8.1"
   }
 }
